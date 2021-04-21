@@ -1,0 +1,13 @@
+.Boton{
+    margin-left: 50%;
+    margin-right: auto;
+}
+
+.body{
+    margin: 0%;
+    padding: 0px;
+    font-family: sans-serif;
+    background: url(/public/images/img.png);
+    background-size: cover;
+}
+

@@ -3,29 +3,24 @@ import APIInvoker from "../utils/APIInvoker";
 import update from 'immutability-helper'
 import Navbar from "./Navbar";
 
-class SignUp extends React.Component {
+class Prueba extends React.Component {
 
     constructor() {
         super()
         this.state  = {
-            idRol : '1',
             nombre : '',
             apellidoPaterno : '',
             username : '',
             password : '',
             rolList: []
         }
-        this.rolList=[]
         this.status = false
         this.usernameOk = false
         //Extraer el catálogo de roles del backend
         APIInvoker.invokeGET('/roles/getAllRoles',data => {  //Entrará acá cuando status = true
             this.setState({
-                rolList : data.data,
-                //console.log(rolList)
+                rolList : data.data
             })
-            console.log(data.data)
-            console.log(data.status)
         }, error => { //Entrará acá cuando status = false
         })
     }
@@ -40,13 +35,13 @@ class SignUp extends React.Component {
     }
 
     validateUsername(e) {
-        let username = this.state.username
-        if (username) {
-            APIInvoker.invokeGET(`/users/usernameValidate/${username}`,data => {
-                this.username.innerHTML = '* El nombre de usuario no está disponible'
+        let nombre = this.state.nombre
+        if (nombre) {
+            APIInvoker.invokeGET(`/prueba/pruebanameValidate/${nombre}`,data => {
+                this.nombre.innerHTML = '* El nombre de esta planta no está disponible'
                 this.usernameOk = false
             }, error => {
-                this.username.innerHTML = '* El nombre de usuario está disponible'
+                this.nombre.innerHTML = '* El nombre de esta planta está disponible'
                 this.usernameOk =  true
             })
         } else
@@ -56,17 +51,15 @@ class SignUp extends React.Component {
     crearCuenta(e){
         this.messageError.innerHTML = ''
         this.validarCampos()
-        console.log(this.state.idRol)
         if (this.status && this.usernameOk) {
             let user = {
-                idRol: this.state.idRol,
                 nombre: this.state.nombre,
                 apellidoPaterno: this.state.apellidoPaterno,
                 username: this.state.username,
                 password: this.state.password
             }
 
-            APIInvoker.invokePOST('/users/signup',user,data=>{
+            APIInvoker.invokePOST('/prueba/pruebaAdd',user,data=>{
                 alert(data.message)
                 this.usernameOk = false
             }, error => {
@@ -79,12 +72,6 @@ class SignUp extends React.Component {
 
     validarCampos(){
         let estado = true;
-
-        if (this.state.idRol.length === 0) {
-            this.idrRol.innerHTML = '* Campo obligatorio'
-            estado = false;
-        } else
-            this.idrRol.innerHTML = ''
 
         if (this.state.nombre.length === 0) {
             this.nombre.innerHTML = '* Campo obligatorio'
@@ -119,18 +106,8 @@ class SignUp extends React.Component {
         return (
             <div>
                 <Navbar> </Navbar>
-                <h1>Registro de usuarios</h1>
+                <h1>Registro de Plantas</h1>
                 <form onSubmit={this.crearCuenta.bind(this)}>
-                    <div>
-                        <label htmlFor='idRol'>Tipo de usuario</label>
-                        <select name="idRol" id="idRol" value={this.state.idRol} onChange={this.changeField.bind(this)}>
-                            <For each="item" index="idx" of={ this.state.rolList }>
-                                <option key={idx} value={item.idRoles}>{item.Rol}</option>
-                            </For>
-
-                        </select>
-                        <label ref={self=> this.idrRol = self}></label>
-                    </div>
                     <div>
                         <label htmlFor='nombre'>Nombre</label>
                         <input type='text'
@@ -138,11 +115,13 @@ class SignUp extends React.Component {
                                name='nombre'
                                placeholder=''
                                value={this.state.nombre}
-                               onChange={this.changeField.bind(this)}/>
+                               ref={self => this.inputUsername = self}
+                               onChange={this.changeField.bind(this)}
+                               onBlur={this.validateUsername.bind(this)}/>
                         <label ref={self=> this.nombre = self}></label>
                     </div>
                     <div>
-                        <label htmlFor='apellidoPaterno'>Apellido paterno</label>
+                        <label htmlFor='apellidoPaterno'>Precio</label>
                         <input  type='text'
                                 id='apellidoPaterno'
                                 name='apellidoPaterno'
@@ -152,7 +131,7 @@ class SignUp extends React.Component {
                         <label ref={self=> this.apellidoPaterno = self}></label>
                     </div>
                     <div>
-                        <label htmlFor='username'>Nombre de usuario</label>
+                        <label htmlFor='username'>Cantidad</label>
                         <input  type='text'
                                 id='username'
                                 name='username'
@@ -164,8 +143,8 @@ class SignUp extends React.Component {
                         <label ref={self=> this.username = self}></label>
                     </div>
                     <div>
-                        <label htmlFor='password'>Contraseña</label>
-                        <input  type='password'
+                        <label htmlFor='password'>Condicion</label>
+                        <input  type='text'
                                 id='password'
                                 name='password'
                                 placeholder=''
@@ -176,7 +155,7 @@ class SignUp extends React.Component {
 
                     <button
                         onClick={this.crearCuenta.bind(this)}>
-                        Crear cuenta
+                        Registrar Planta
                     </button>
                     <div ref={self => this.messageError = self}></div>
                 </form>
@@ -185,4 +164,4 @@ class SignUp extends React.Component {
     }
 }
 
-export default SignUp;
+export default Prueba;
