@@ -12,32 +12,21 @@ class CardsProductos extends React.Component {
     render() {
         console.log("Render")
         return (
-
-            <html>
-                <head>
-                    <meta charSet="UTF-8"/>
-                    <meta name="viewport" content="width=device-width,
-                    initial-scale=1.0"/>
-                    <title>CSS Card Hover Effects</title>
-                    <link rel="stylesheet" href="style2.css"/>
-            </head>
-
-            <body>
-                <div className="container">
+            <div className="row row-cols-1 row-cols-md-2 g-4 my-0">
+                <div className="col  ">
                     <div className="card">
-                        <div className="circle">
-                            <h2>01</h2>
-                        </div>
-                        <div className="content">
-                            <p>
-                                {this.props.nombre}
-                            </p>
-                            <a href="#"> Read More</a>
+                        <div className="card-body">
+
+                            <div className="borde">
+                                <h3 className="text-info bg-primary mb-3">Id: {this.props.idUser}</h3>
+                            </div>
+                            {this.props.nombre}
                         </div>
                     </div>
                 </div>
-            </body>
-            </html>
+            </div>
+
+
 
         )
     }

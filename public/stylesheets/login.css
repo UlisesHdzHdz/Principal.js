@@ -1,3 +1,99 @@
 .label-error {
     color: red;
 }
+.main{
+    background-color: red;
+}
+body {
+    background-image: url("https://static.tumblr.com/6a85513621c06c1667155f337edb3074/dzocs10/YUNnrfhed/tumblr_static_7nvyupcebyscgog0gs4ssg40k_2048_v2.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+
+.contenedor{
+    width: 100%;
+    padding: 15px;
+}
+
+.formulario{
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+
+h1{
+    font-size: 80px;
+    color: #ffffff;
+    font-family: "Helvetica";
+    font-style: normal;
+}
+input[type="text"],
+input[type="password"]{
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
+}
+.input-contenedor{
+    margin-bottom: 10px;
+}
+
+p{
+    color: #ffffff;
+    font-family: "Helvetica";
+    font-style: normal;
+}
+
+.button{
+    border: none;
+    width: 45%;
+    color: white;
+    font-size: 20px;
+    background:  #07c026;
+    padding: 15px 20px;
+    border-radius: 19px;
+    cursor: pointer;
+}
+.button:hover{
+    background: rgb(95, 160, 109);
+
+}
+
+@media(min-width:768px)
+{
+    .formulario{
+        margin: auto;
+        width: 500px;
+        height:550px;
+        margin-top: 10px;
+        border-radius: 2%;
+
+    }
+}
+
+/* iconos*/
+.icono{
+    height: 36px;
+    object-fit: cover;
+    width: 32px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

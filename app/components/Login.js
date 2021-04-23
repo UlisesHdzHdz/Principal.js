@@ -2,7 +2,9 @@ import React from 'react'
 import update from 'immutability-helper'
 import APIInvoker from "../utils/APIInvoker";
 import Navbar from "./Navbar";
-import "../assets/stylesheets/Login.css";
+import style from '../../public/stylesheets/login.css';
+import icousuario from '../assets/icons/icon-awesome-user-alt-1@1x.png';
+import icopass from  '../assets/icons/icon-awesome-lock@1x.png'
 
 
 class Login extends React.Component{
@@ -57,11 +59,15 @@ class Login extends React.Component{
     render() {
         return(
 
-                <div className={"Fondo"}>
-                    <h1>Vivero</h1>
-                    <form className={"imput Form"}>
-                        <div className={"d-flex justify-content-center"}>
+                <form className="formulario">
+                     <h1>Login</h1>
+                     <div className="contenedor">
+
+                        <p>
+                            <img className="icono" src={icousuario}/>
                             <label  htmlFor="username">Nombre de usuario</label>
+                        </p>
+                        <div className="input-contenedor">
                             <input type="text"
                                    name="username"
                                    id="username"
@@ -72,8 +78,12 @@ class Login extends React.Component{
                             <div className="label-error" ref={ self => this.label = self}></div>
                         </div>
 
-                        <div className={"d-flex justify-content-center"}>
-                            <label htmlFor="password">Contraseña</label>
+
+                    <p>
+                        <img className="icono" src={icopass}/>
+                        <label htmlFor="password">  Contraseña</label>
+                    </p>
+                        <div className="input-contenedor">
                             <input type="password"
                                    name="password"
                                    id="password"
@@ -82,11 +92,13 @@ class Login extends React.Component{
                                    onChange={this.changeField.bind(this)}/>
                             <div className="label-error" ref={ self => this.pass = self}> </div>
                         </div>
-                        <button className={"Boton"}
-                            type="button" onClick={this.iniciarSesion.bind(this)} >Iniciar sesión</button>
 
-                    </form>
-                </div>
+                        <button className="button" type="button" onClick={this.iniciarSesion.bind(this)}>Iniciar
+                            sesión
+                        </button>
+
+                    </div>
+                </form>
         )
     }
 }

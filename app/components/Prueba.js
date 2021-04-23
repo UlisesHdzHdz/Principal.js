@@ -2,7 +2,7 @@ import React from 'react'
 import APIInvoker from "../utils/APIInvoker";
 import update from 'immutability-helper'
 import Navbar from "./Navbar";
-
+import style from '../../public/stylesheets/SignUp.css';
 class Prueba extends React.Component {
 
     constructor() {
@@ -104,62 +104,87 @@ class Prueba extends React.Component {
 
     render(){
         return (
+
             <div>
                 <Navbar> </Navbar>
-                <h1>Registro de Plantas</h1>
-                <form onSubmit={this.crearCuenta.bind(this)}>
-                    <div>
-                        <label htmlFor='nombre'>Nombre</label>
-                        <input type='text'
-                               id='nombre'
-                               name='nombre'
-                               placeholder=''
-                               value={this.state.nombre}
-                               ref={self => this.inputUsername = self}
-                               onChange={this.changeField.bind(this)}
-                               onBlur={this.validateUsername.bind(this)}/>
-                        <label ref={self=> this.nombre = self}></label>
-                    </div>
-                    <div>
-                        <label htmlFor='apellidoPaterno'>Precio</label>
-                        <input  type='text'
-                                id='apellidoPaterno'
-                                name='apellidoPaterno'
-                                placeholder=''
-                                value={this.state.apellidoPaterno}
-                                onChange={this.changeField.bind(this)}/>
-                        <label ref={self=> this.apellidoPaterno = self}></label>
-                    </div>
-                    <div>
-                        <label htmlFor='username'>Cantidad</label>
-                        <input  type='text'
-                                id='username'
-                                name='username'
-                                placeholder=''
-                                value={this.state.username}
-                                ref={self => this.inputUsername = self}
-                                onChange={this.changeField.bind(this)}
-                                onBlur={this.validateUsername.bind(this)}/>
-                        <label ref={self=> this.username = self}></label>
-                    </div>
-                    <div>
-                        <label htmlFor='password'>Condicion</label>
-                        <input  type='text'
-                                id='password'
-                                name='password'
-                                placeholder=''
-                                value={this.state.password}
-                                onChange={this.changeField.bind(this)}/>
-                        <label ref={self=> this.password = self}></label>
-                    </div>
 
-                    <button
-                        onClick={this.crearCuenta.bind(this)}>
-                        Registrar Planta
-                    </button>
-                    <div ref={self => this.messageError = self}></div>
-                </form>
+                <div className="rectngulo-17 border-1px-dove-gray">
+
+                    <h1 className="text-1">Registro de Plantas</h1>;
+                    <form onSubmit={this.crearCuenta.bind(this)}>
+                        <div className="contenedor">
+
+                            <p>
+                                <label htmlFor='nombre'>Nombre</label>
+
+                                <div className="input-contenedor">
+                                    <input type='text'
+                                           id='nombre'
+                                           name='nombre'
+                                           placeholder=''
+                                           value={this.state.nombre}
+                                           ref={self => this.inputUsername = self}
+                                           onChange={this.changeField.bind(this)}
+                                           onBlur={this.validateUsername.bind(this)}/>
+                                    <label ref={self=> this.nombre = self}></label>
+
+                                </div>
+                            </p>
+
+                            <p>
+                                <label htmlFor='apellidoPaterno'>Precio</label>
+                                <div className="input-contenedor">
+                                    <input  type='text'
+                                            id='apellidoPaterno'
+                                            name='apellidoPaterno'
+                                            placeholder=''
+                                            value={this.state.apellidoPaterno}
+                                            onChange={this.changeField.bind(this)}/>
+                                    <label ref={self=> this.apellidoPaterno = self}></label>
+                                </div>
+                            </p>
+
+                            <p>
+                                <label htmlFor='username'>Cantidad</label>
+
+                                <div className="input-contenedor">
+                                    <input  type='text'
+                                            id='username'
+                                            name='username'
+                                            placeholder=''
+                                            value={this.state.username}
+                                            ref={self => this.inputUsername = self}
+                                            onChange={this.changeField.bind(this)}
+                                            onBlur={this.validateUsername.bind(this)}/>
+                                    <label ref={self=> this.username = self}></label>
+
+                                </div>
+                            </p>
+                            <p>
+                                <label htmlFor='password'>Condicion</label>
+                                <div className="input-contenedor">
+                                    <input  type='text'
+                                            id='password'
+                                            name='password'
+                                            placeholder=''
+                                            value={this.state.password}
+                                            onChange={this.changeField.bind(this)}/>
+                                    <label ref={self=> this.password = self}></label>
+
+                                </div>
+                            </p>
+                            <button className="rectngulo-23 border-1px-dove-gray"
+                                onClick={this.crearCuenta.bind(this)}>
+                                Registrar Planta
+                            </button>
+                            <div ref={self => this.messageError = self}></div>
+
+                        </div>
+                    </form>
+                </div>
             </div>
+
+
         )
     }
 }

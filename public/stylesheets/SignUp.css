@@ -1,0 +1,104 @@
+.rectngulo-17 {
+    -webkit-backdrop-filter: blur(30px) brightness(115%);
+    backdrop-filter: blur(30px) brightness(115%);
+    height: 497px;
+    width: 650px;
+    margin-top: 100px;
+    margin-left: 350px;
+}
+.cuadro {
+    -webkit-backdrop-filter: blur(30px) brightness(115%);
+    backdrop-filter: blur(30px) brightness(115%);
+    height: 100px;
+    width: 800px;
+    margin-top: 60px;
+    margin-left: 350px;
+    text-align: center;
+    border-radius: 53px;
+}
+.container{
+
+    margin-left: 420px;
+}
+.borde{
+    background-color: #07c026;
+    color: #07c026
+;
+}
+
+@font-face {
+    font-family: "SegoeUI-Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.animaapp.com/SegoeUI-Regular") format("truetype");
+}
+.border-1px-dove-gray {
+    border: 1px solid var(--dove-gray);
+}
+:root {
+    --dove-gray: rgba(112, 112, 112, 1);
+}
+
+
+/*  */
+.text-1 {
+    color: var(--white);
+    font-family: 'SegoeUI-Regular', Helvetica;
+    font-size: 40px;
+    letter-spacing: 0.00px;
+    line-height: 40px;
+    min-height: 55px;
+    white-space: nowrap;
+    margin-top: 50px;
+    margin-left: 130px;
+}
+@font-face {
+    font-family: "SegoeUI-Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.animaapp.com/SegoeUI-Regular") format("truetype");
+}
+:root {
+    --font-family-segoeui-regular: "SegoeUI-Regular", Helvetica;
+    --font-size-xxxl: 40px;
+    --white: rgba(255, 255, 255, 1);
+}
+/*  */
+
+
+input{
+    height: 15px;
+    width: 60px;
+
+}
+
+p{
+    color: var(--black);
+    font-family: 'SegoeUI-Regular', Helvetica;
+    font-size: 10px;
+    letter-spacing: 0.00px;
+
+    white-space: nowrap;
+}
+.rectngulo-23 {
+    background-color: rgba(64,255,250,1.0);
+    border-radius: 50px;
+    height: 45px;
+    width: 150px;
+    margin-top: 40px;
+    margin-left: 230px;
+}
+.rectngulo-21 {
+    font-family: "Comic Sans MS";
+    font-size: 20px;
+    background-color: #07c026;
+    border-radius: 50px;
+    height: 80px;
+    width: 350px;
+    margin-top: 40px;
+    margin-left: 10px;
+
+}
+
+
+

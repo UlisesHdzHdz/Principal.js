@@ -1,0 +1,14 @@
+.cuadro {
+    -webkit-backdrop-filter: blur(30px) brightness(115%);
+    backdrop-filter: blur(30px) brightness(115%);
+    height: 100px;
+    width: 800px;
+
+    margin-top: 60px;
+    margin-left: 350px;
+    text-align: center;
+    border-radius: 53px;
+}
+.eslogan1{
+    font-size: 1000px
+}

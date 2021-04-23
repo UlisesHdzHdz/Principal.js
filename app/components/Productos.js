@@ -98,47 +98,70 @@ class Productos extends React.Component {
         return (
             <div>
                 <Navbar> </Navbar>
-                <h1>Productos</h1>
-                <form onSubmit={this.crearCuenta.bind(this)}>
-                    <div>
-                        <label htmlFor='nombre'>Nombre</label>
-                        <input type='text'
-                               id='nombre'
-                               name='nombre'
-                               placeholder=''
-                               value={this.state.nombre}
-                               ref={self => this.inputUsername = self}
-                               onChange={this.changeField.bind(this)}
-                               onBlur={this.validateProductoname.bind(this)}/>
-                        <label ref={self=> this.nombre = self}></label>
-                    </div>
-                    <div>
-                        <label htmlFor='precio'>Precio</label>
-                        <input  type='text'
-                                id='precio'
-                                name='precio'
-                                placeholder=''
-                                value={this.state.precio}
-                                onChange={this.changeField.bind(this)}/>
-                        <label ref={self=> this.precio = self}></label>
-                    </div>
-                    <div>
-                        <label htmlFor='cantidad'>Cantidad</label>
-                        <input  type='text'
-                                id='cantidad'
-                                name='cantidad'
-                                placeholder=''
-                                value={this.state.cantidad}
-                                onChange={this.changeField.bind(this)}/>
-                        <label ref={self=> this.cantidad = self}></label>
-                    </div>
-                    <button
-                        onClick={this.crearCuenta.bind(this)}>
-                        Registrar Producto
-                    </button>
-                    <div ref={self => this.messageError = self}></div>
-                </form>
+
+                <div className="rectngulo-17 border-1px-dove-gray">
+
+
+                    <h1 className="text-1">Registro de Usuarios</h1>;
+                    <form onSubmit={this.crearCuenta.bind(this)}>
+                        <div className="contenedor">
+
+                            <p>
+                                <label htmlFor='nombre'>Nombre</label>
+
+                                <div className="input-contenedor">
+                                    <input type='text'
+                                           id='nombre'
+                                           name='nombre'
+                                           placeholder=''
+                                           value={this.state.nombre}
+                                           ref={self => this.inputUsername = self}
+                                           onChange={this.changeField.bind(this)}
+                                           onBlur={this.validateProductoname.bind(this)}/>
+                                    <label ref={self=> this.nombre = self}></label>
+
+                                </div>
+                            </p>
+
+                            <p>
+                                <label htmlFor='precio'>Precio</label>
+
+                                <div className="input-contenedor">
+                                    <input  type='text'
+                                            id='precio'
+                                            name='precio'
+                                            placeholder=''
+                                            value={this.state.precio}
+                                            onChange={this.changeField.bind(this)}/>
+                                    <label ref={self=> this.precio = self}></label>
+
+                                </div>
+                            </p>
+
+                            <p>
+                                <label htmlFor='cantidad'>Cantidad</label>
+
+                                <div className="input-contenedor">
+                                    <input  type='text'
+                                            id='cantidad'
+                                            name='cantidad'
+                                            placeholder=''
+                                            value={this.state.cantidad}
+                                            onChange={this.changeField.bind(this)}/>
+                                    <label ref={self=> this.cantidad = self}></label>
+
+                                </div>
+                            </p>
+                            <button className="rectngulo-23 border-1px-dove-gray"
+                                onClick={this.crearCuenta.bind(this)}>
+                                Registrar Producto
+                            </button>
+                            <div ref={self => this.messageError = self}></div>
+                        </div>
+                    </form>
+                </div>
             </div>
+
         )
     }
 }

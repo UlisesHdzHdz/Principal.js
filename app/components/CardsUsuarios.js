@@ -27,11 +27,14 @@ class CardsUsuarios extends React.Component {
 
                 <div className="row row-cols-1 row-cols-md-2 g-4 my-0">
 
-                    <div className="col">
+                    <div className="col  ">
                         <div className="card">
 
                                 <div className="card-body">
-                                    <h3>Id: {this.props.idUser}</h3>
+                                    <div className="borde">
+                                        <h3 className="text-info bg-warning mb-3">Id: {this.props.idUser}</h3>
+                                    </div>
+
                                     <h5 className="card-title">Nombre: {this.props.nombre}</h5>
                                     <p className="card-text">Apllido Paterno: {this.props.apellidoPaterno}</p>
                                     <p className="card-text">Username: {this.props.username }</p>
@@ -56,7 +59,7 @@ class CardsUsuarios extends React.Component {
                                                 </div>
 
                                                 <div className="modal-footer">
-                                                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <button type="button" className="btn btn-primary" data-bs-dismiss="modal">Close</button>
                                                     <button type="button" className="btn btn-primary">Save changes</button>
                                                 </div>
                                             </div>

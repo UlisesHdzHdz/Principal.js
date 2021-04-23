@@ -13,6 +13,7 @@ import CRUD from '../pages/CRUDRol'
     import mostrarPlantas from "./mostrarPlantas";
     import mostrarUsuarios from "./mostrarUsuarios";
     import LoginCSS from "./LoginCSS";
+    import Principal from "../pages/Principal";
 
 
 class App extends React.Component{
@@ -20,7 +21,7 @@ class App extends React.Component{
         return (
             <BrowserRouter>
                 <Switch>
-                    <Route exact path='/' component={CRUD}/>
+                    <Route exact path='/' component={Principal}/>
                     <Route exact path='/login' component={Login}/>
                     <Route exact path='/main' component={Root}/>
                     <Route exact path='/register' component={SignUp}/>

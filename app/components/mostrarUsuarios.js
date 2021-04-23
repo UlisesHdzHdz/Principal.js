@@ -31,12 +31,23 @@ class mostrarUsuarios extends React.Component {
         return(
 
 
-            <div className="container">
+            <div>
 
                 <Navbar> </Navbar>
-                <h1>Visualizando Los Usuarios Existentes</h1>
+
+                <div className="cuadro border-1px-dove-gray">
+                    <h1 className="eslogan1">Usuarios Existentes</h1>
+                </div>
+
                 <For each="item" index="index" of={this.state.data} >
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-7">
+                            </div>
                     <CardsUsuarios key={index} idUser={item.idUser} nombre={item.nombre} apellidoPaterno={item.apellidoPaterno} username={item.username} IdRol={item.IdRol}/>
+                        </div>
+                    </div>
+                    <br/>
                 </For>
             </div>
         )

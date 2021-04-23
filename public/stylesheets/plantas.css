@@ -1,0 +1,21 @@
+.rectngulo-32 {
+
+    -webkit-backdrop-filter: blur(30px) brightness(115%);
+    backdrop-filter: blur(30px) brightness(115%);
+    height: 497px;
+    width: 650px;
+    margin-top: 100px;
+    margin-left: 350px;
+}
+@font-face {
+    font-family: "SegoeUI-Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.animaapp.com/SegoeUI-Regular") format("truetype");
+}
+.border-1px-dove-gray {
+    border: 1px solid var(--dove-gray);
+}
+:root {
+    --dove-gray: rgba(112, 112, 112, 1);
+}

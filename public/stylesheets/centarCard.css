@@ -1,0 +1,17 @@
+.centarCard{
+    margin-top: 40px;
+    margin-left: 230px;
+}
+
+.botonesCard{
+    background-color: rgba(64,255,250,1.0);
+    border-radius: 50px;
+    height: 45px;
+    width: 150px;
+    margin-top: 40px;
+    margin-left: 230px;
+}
+.idtargeta{
+    color: black;
+}
+
